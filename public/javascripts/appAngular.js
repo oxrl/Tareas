@@ -1,4 +1,4 @@
-angular.module('appTareas', ['ui.router'])
+angular.module('appTareas', ['ui.router'])/*Cambio de prueba */
     .config(function($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state('alta', {
@@ -27,9 +27,8 @@ angular.module('appTareas', ['ui.router'])
         comun.getAll = function(){
             return $http.get('/tareas')
                 .success(function(data){
-                    angular.copy(data, comun.tareas)
-
-                    return comun.tareas
+                    angular.copy(data, comun.tareas);
+                    return comun.tareas;
                 })
         }
         comun.add = function(tarea){
