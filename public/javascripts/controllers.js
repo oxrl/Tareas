@@ -94,11 +94,7 @@ angular.module('appTareas')
         {
             $scope.currentPage = index - 1;
         }
-
-
-
-})
-    .controller('ctrlEditar', function($scope, $state, comun) {
+}).controller('ctrlEditar', function($scope, $state, comun) {
         $scope.tarea=comun.tarea;
 
         $scope.actualizar = function() {
