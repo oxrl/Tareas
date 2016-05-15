@@ -19,9 +19,9 @@
     </div>
     <button type="submit" class="btn btn-success" ng-click="agregar()">Agregar</button>
 </form>
-<div class="todoList bg-info">
+<div class="todoList bg-info" ng-init='consultarTodos()'>
     <h4>Tareas registradas</h4>
-    <div class="item" ng-repeat="tarea in tareas | orderBy:'-prioridad' | startFromGrid: currentPage * pageSize | limitTo: pageSize",  ng-init='consultarTodos()'>
+    <div class="item" ng-repeat="tarea in tareas | orderBy:'-prioridad' | startFromGrid: currentPage * pageSize | limitTo: pageSize">
         <span class="glyphicon glyphicon-circle-arrow-up" ng-hide="tarea.prioridad==2" ng-click="masPrioridad(tarea)"></span>
         <span class="glyphicon glyphicon-circle-arrow-down" ng-hide="tarea.prioridad==0" ng-click="menosPrioridad(tarea)"></span>
         <span class="prioridad">Prioridad: {{prioridades[tarea.prioridad]}}</span> |

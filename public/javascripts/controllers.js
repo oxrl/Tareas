@@ -1,5 +1,4 @@
 angular.module('appTareas')
-
     .controller('ctrlAlta', function($scope, $state, comun) {
         $scope.currentPage = 0;
         $scope.pageSize = 5;
@@ -8,9 +7,10 @@ angular.module('appTareas')
         $scope.actuales = [];
         $scope.actual = {};
 
-    $scope.tarea = {}
+    $scope.tarea = {};
     // $scope.tareas = [];
-    comun.getAll();
+        comun.getAll();
+        console.debug();
     $scope.tareas = comun.tareas;
 
     $scope.prioridades = ['Baja', 'Normal', 'Alta'];
@@ -86,7 +86,8 @@ angular.module('appTareas')
                 {
                     $scope.currentPage = $scope.pages.length - 1;
                 }
-
+        //    console.log("currentPage");
+            console.debug();
                 $scope.currentPage = 0;
 
         }
